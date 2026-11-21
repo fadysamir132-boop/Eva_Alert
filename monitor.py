@@ -35,3 +35,5 @@ if is_available():
     print("available")
 else:
     print("still sold out")
+    if os.environ.get("GITHUB_EVENT_NAME") == "workflow_dispatch":
+        send("اختبار: المنتج لسه Sold out، والبوت شغال ✅")
